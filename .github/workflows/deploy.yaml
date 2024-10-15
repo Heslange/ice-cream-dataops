@@ -6,6 +6,7 @@ on:
     paths:
       - modules/** # run when changes in modules
       - config.test.yaml # run when changes in config.test.yaml
+      - config.prod.yaml
   # Allow manual triggering of the workflow
   workflow_dispatch:
 
