@@ -15,7 +15,7 @@ env:
 jobs:
   build-modules:
     runs-on: ubuntu-latest
-    environment: test
+    environment: prod
     env:
         CDF_PROJECT: ${{ vars.CDF_PROJECT }}
         IDP_CLIENT_ID: ${{ vars.IDP_CLIENT_ID }}
@@ -39,7 +39,7 @@ jobs:
       - name: Install cdf-tk
         run: pip install cognite-toolkit==0.3.2
       - name: "Build the templates"
-        run: cdf-tk build --build-dir=./build --env=test
+        run: cdf-tk build --build-dir=./build --env=prod
       - name: "Deploy"
         run: echo "Deploying to ${CDF_PROJECT} with ${CDF_CLUSTER}"
       - name: "Deploy the templates"
