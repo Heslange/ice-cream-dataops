@@ -2,7 +2,7 @@ name: Deploy modules to test project
 on:
   push:
     branches:
-      - main # run when this branch changes (following a Pull Request)
+      - test # run when this branch changes (following a Pull Request)
     paths:
       - modules/** # run when changes in modules
       - config.test.yaml # run when changes in config.test.yaml
